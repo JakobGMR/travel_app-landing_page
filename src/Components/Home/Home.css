@@ -1,0 +1,135 @@
+.Home {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  top: 0;
+}
+.Home .videoBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.Home .videoBg video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Home .sectionText {
+  position: absolute;
+  height: 100%;
+  top: 30%;
+  bottom: 50%;
+  color: var(--whiteColor);
+  padding: 0 1.3rem;
+}
+.Home .sectionText h1 {
+  font-size: var(--biggestFontSize);
+  font-weight: 900;
+}
+.Home .sectionText p {
+  padding: 1rem 0;
+  font-size: var(--normalFontSize);
+  font-weight: 500;
+}
+.Home .sectionText .btn {
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: var(--h3FontSize);
+}
+.Home .popularPlaces {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .Home .sectionText {
+    padding: 0 2rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .Home h1 {
+    font-size: var(--biggestFontSize);
+  }
+  .Home p {
+    padding: 1rem 0;
+    font-size: var(--h2FontSize);
+    max-width: 70%;
+    margin: auto;
+  }
+  .Home .btn {
+    font-size: var(--h3FontSize);
+    margin: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .Home .sectionText {
+    width: 100%;
+  }
+  .Home .sectionText h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    max-width: 70%;
+    margin: auto;
+  }
+  .Home .sectionText p {
+    padding: 1rem 0;
+    font-size: var(--h2FontSize);
+    max-width: 70%;
+    margin: auto;
+  }
+  .Home .sectionText .btn {
+    gap: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: var(--h3FontSize);
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .Home {
+    position: relative;
+  }
+  .Home .sectionText h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    max-width: 70%;
+    margin: auto;
+  }
+  .Home .popularPlaces {
+    display: block;
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Home .popularPlaces .content h3 {
+    color: var(--whiteColor);
+    padding: 1rem 0;
+    position: relative;
+  }
+  .Home .popularPlaces .content h3::after {
+    content: "";
+    width: 83%;
+    height: 2px;
+    background-color: rgb(202, 202, 202);
+    right: 0;
+    bottom: 50%;
+    position: absolute;
+  }
+  .Home .popularPlaces .content .images {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .Home .popularPlaces .content .images img {
+    height: 100px;
+    width: 210px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,124 @@
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    border-bottom: 1.5px solid var(--primaryColor);
+    background-color: rgba(255, 255, 255, 0.737);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    
+    .logoDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        span{
+            color: var(--blackColor);
+            font-size: var(--h3FontSize);
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 767px){
+        .menu{
+            position: absolute;
+            width: 70%;
+            top: -100rem;
+            right: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            background: rgba(255, 255, 255, 0.94);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: .8s ease-in-out;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 3px 4px rgba(236, 213, 213, 0.516);
+            
+            li{
+                font-size: var(--h3FontSize);
+                font-weight: 500;
+                padding: 1rem 0;
+                text-align: center;
+                cursor: pointer;
+                
+                &:hover{
+                    color: var(--primaryColor);
+                    border-bottom: 1.5px solid var(--primaryColor);
+                }
+            }
+        }
+    }
+
+    .menuIcon, .closeIcon{
+        font-size: var(--h1FontSize);
+
+        &:hover{
+            color: var(--primaryColor);
+        }
+    }
+
+    .closeIcon{
+        position: absolute;
+        bottom: -15px;
+        right: 50%;
+        left: 50%;
+        color: var(--blackColor);
+        transform: translate(-50%);
+    }
+
+    .showNavbar{
+        top: 8rem;
+    }
+}
+@media screen and (min-width: 768px){
+    .navBar{
+        .logoDiv{
+            span{
+                font-size: var(--h2FontSize);
+            }
+        }
+
+        .closeIcon, .menuIcon{
+            display: none;
+        }
+
+        .menu{
+            ul{
+                display: flex;
+                gap: 2rem;
+            }
+
+            li{
+                font-size: var(--h3FontSize);
+                font-weight: 500;
+                padding: 1rem 0;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover{
+                    color: var(--primaryColor);
+                    border-bottom: 1.5px solid var(--primaryColor);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1240px){
+    .navBar{
+        padding: 2rem 6rem;
+
+        .menu{
+            ul{
+                gap: 4rem;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1440px){
+    .navbar{
+        padding: 2rem 14rem;
+    }
+}
